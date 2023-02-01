@@ -17,7 +17,7 @@ fn main() {
     println!("{}", res);
 }
 
-//函数的入参使用了切片类型&str，可以同时处理String和&str类型，更加通用；因为&String
+//函数的入参使用了切片类型&str，可以同时处理String和&str类型，更加通用
 fn find_first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
     for (i, &ch) in bytes.iter().enumerate() {
