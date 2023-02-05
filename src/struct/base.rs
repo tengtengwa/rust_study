@@ -1,3 +1,6 @@
+/**
+ * rust的结构体类似于c/cpp的结构体，都表示一个对象相关的数据，是一种数据的组织形式
+ */
 fn main() {
     let ming = Student {
         age: 18,
