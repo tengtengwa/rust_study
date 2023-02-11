@@ -20,6 +20,8 @@ fn main() {
     hong.name = String::from("小红");
 
     let wang = fun_return_student(String::from("wang"), 20);
+
+    println!("结构体wang：{:#?}", wang);
 }
 
 //一个通过传入参数创建结构体实例的函数
@@ -31,6 +33,7 @@ fn fun_return_student(name: String, age: i32) -> Student {
     }
 }
 
+#[derive(Debug)] //注解派生Debug trait
 struct Student {
     name: String,
     age: i32,
