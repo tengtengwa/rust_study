@@ -19,8 +19,8 @@ fn mut_reference() {
     let mut s = String::from("mut str");
     let a1 = &s;
     let a2 = &s;
-    let a3 = &mut s; //√ 可变引用可以指向一个可变引用
-                     //× 但不可变引用不能指向一个可变引用；同理，可变引用也不能指向一个不可变引用，可以理解为类型不匹配
+    let a3 = &mut s; //√ 可变引用可以指向一个可变引用(这里没有显示指定a3的类型，编译器推导为&mut String类型)
+    //× 但不可变引用不能指向一个可变引用；同理，可变引用也不能指向一个不可变引用，可以理解为类型不匹配
     let a4: String = &mut s;
     let a5: &mut String = &s;
     //调用函数传递可变引用类型时使用&mut
